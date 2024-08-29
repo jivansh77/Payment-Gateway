@@ -7,7 +7,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <style>
         body {
-            background-color: #fbeac9;
+            background: white;
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
@@ -17,12 +17,12 @@
         }
 
         .donation-container {
-            background-color: white;
+            background-color: #f9e0ae;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 800px;
-						height: 400px;
+			height: 400px;
             text-align: center;
             padding-right: 52px;
         }
@@ -30,7 +30,7 @@
         .donation-container h2 {
             color: #ff6f00;
             margin-bottom: 20px;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
         }
 
         .donation-container input[type="text"],
@@ -85,7 +85,7 @@
                 var formData = $(this).serialize();
 
                 $.ajax({
-                    url: "/createOrder",
+                    url: "/donation/createOrder",
                     type: "POST",
                     data: formData,
                     success: function (res) {
